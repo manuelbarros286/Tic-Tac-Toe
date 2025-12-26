@@ -40,16 +40,16 @@ export default function Game(){
     return(
         <>
             <div className="app-state">
-            <div className="game">
-                <div className="game-board">
-                <div>You are on {currentMove === 0 ? " game start" : "move # " + currentMove}</div>
-                        <Board nextPlayer={nextPlayer}
-                                squares={currentSquares}
-                                onPlay={handlePlay}
-                               newGame={newGame}
-                                />
+                <div className="game">
+                    <div className="game-board">
+                        <div>You are on {currentMove === 0 ? " game start" : "move # " + currentMove}</div>
+                            <Board nextPlayer={nextPlayer}
+                                    squares={currentSquares}
+                                    onPlay={handlePlay}
+                                   newGame={newGame}
+                                    />
+                    </div>
                 </div>
-            </div>
                 <div className="game-info">
                     <ol> {moves} </ol>
                 </div>            

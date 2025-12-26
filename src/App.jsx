@@ -51,10 +51,6 @@ export default function Board({nextPlayer, squares, onPlay, newGame}){
         }
         
         onPlay(nextSquares);
-        // setSquares(nextSquares);
-        // // console.log(squares);
-        // // console.log(nextSquares);
-        // setNextPlayer(!nextPlayer);
     }
     const winner= calculateWinner(squares);
     let status;
@@ -65,22 +61,14 @@ export default function Board({nextPlayer, squares, onPlay, newGame}){
     } else {
         status = "It is  " + (nextPlayer ? "X" : "O") + "'s turn";
     }
-    function startNewGame(newGame){
+    function startNewGame(){
         return(
             <div className="board-footer">
-            <button onClick={handleRestart}>Play Again</button>
+            <button onClick={newGame}>Play Again</button>
             </div>
 
         );
     }
-    function handleRestart(){
-        onPlay(Array(9).fill(null));
-        setNextPlayer(true);
-        setHistory([Array(9).fill(null)]);
-        setCurrentMove(0);
-        moves = [];
-    }
-    
     return (
         <>
             <div className="status">{status}</div>
