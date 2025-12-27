@@ -1,6 +1,5 @@
 import Board from "./App.jsx";
 import {useState, useEffect} from "react";
-import startNewGame from "./App.jsx";
 import "./App.css";
 export default function Game(){
     const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -36,6 +35,7 @@ export default function Game(){
         setCurrentMove(0);
         
     }
+    //also look at inserting player name functionality
     
     return(
         <>

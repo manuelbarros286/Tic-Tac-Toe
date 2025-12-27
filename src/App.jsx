@@ -1,10 +1,4 @@
-import {useState} from "react";
 import "./App.css";
-//from parent component but unresolved function if not imported?
-import setNextPlayer from "./Game.jsx";
-import setHistory from "./Game.jsx";
-import setCurrentMove from "./Game.jsx";
-import moves from "./Game.jsx";
 function Square({value, onSquareClick}){
     return <button className="square" 
                    onClick={onSquareClick}>
@@ -13,7 +7,6 @@ function Square({value, onSquareClick}){
 }
 
 //set up helper function
-
 function calculateWinner(squares){
     const lines =[
         //permutations of winning lines
@@ -55,7 +48,7 @@ export default function Board({nextPlayer, squares, onPlay, newGame}){
     const winner= calculateWinner(squares);
     let status;
     if(winner){
-        status = "Winner: " + winner;
+        status = "Winner: " + winner + "!";
     } else if(!squares.includes(null)){
         status = "It's a Tie!";
     } else {
