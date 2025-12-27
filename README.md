@@ -1,6 +1,6 @@
-# React + Vite
+  # Tic Tac Toe Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Front-end application for a two-player game of Tic Tac Toe, with the ability to rewind game state and restart upon termination of the game. Built with React + Vite.
 
 Currently, two official plugins are available:
 
